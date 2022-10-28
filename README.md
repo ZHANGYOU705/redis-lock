@@ -23,5 +23,5 @@ The most elegant Redis distributed lock implementation.
 ## 存在缺点
 
 - client1 在Redis一个主节点获得了一个锁。
-- 主节点挂了，而主从节点的写同步还没完成（异步复制）。 
+- 主节点挂了，而主从节点的写同步还没完成（异步复制）。
 - 从节点被提升为主节点，client2 就有可能获得和 client1 相同的锁。
